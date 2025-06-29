@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibale" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>
+        Portfolio
+    </title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <nav class="navbar">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class='bx bx-home-alt'></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class='bx bx-user'></i>
+                    <span>About</span>
+                </a>
+                <a href="#services" class="nav-link" data-section="services">
+                    <i class='bx bx-cog'></i>
+                    <span>Services</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class='bx bx-code-alt'></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#project" class="nav-link" data-section="project">
+                    <i class='bx bx-briefcase'></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class='bx bx-envelope'></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Harshaka Herath</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>Undergraduate|SLIIT
+                <br>
+            </p>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/share/1BY8CvWp5i/?mibextid=wwXIfr" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/h_a_r_s_h_a_k_a?igsh=ZTU4YjFyZmt1Y3Vv&utm_source=qr" style="--i:8"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/94766981768" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.tiktok.com/@h_a_r_s_h_a_k_a_?_t=ZS-8tnkqa2nmc8&_r=1" style="--i:10"><i class='bx bxl-tiktok'></i></a>
+
+            </div>
+            <a href="#about" class="btn-box">More About Me</a>
+
+        </div>
+        <div class="home-img">
+            <img src="src/har.jpg" alt="Profile Photo">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="src/profile.jpg" alt="Profile Photo">
+        </div>
+        <div class="about-text">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Engineer!</h3>
+            <p> As a 3rd-year undergraduate pursuing a BSc (Hons) in Information
+                Technology specializing in Information Technology at SLIIT, I am a
+                proactive learner with a strong analytical mindset. I am passionate
+                about designing and developing efficient software solutions, solving
+                complex technical challenges, and collaborating effectively in teams to
+                build innovative applications. I thrive in dynamic environments and
+                continuously seek opportunities to enhance my programming skills,
+                problem-solving abilities, and software development expertise.
+            </p>
+            <a href="#" class="btn-box"> More About Me</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span> Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class='bx bx-palette' style='color:#00eeff'></i>
+                        <h2> UI|UX <br> Design</h2>
+                        <p>I create user-friendly and visually engaging digital experiences. From wireframes to high-fidelity prototypes, I design intuitive interfaces that prioritize usability, accessibility, and aesthetic appeal, ensuring a seamless journey for users across web and mobile platforms.
+                        </p>
+                        <a href="#" class="read" data-service="uiux">Learn More</a>
+                    </div>
+                    <div>
+                        <i class='bx bx-code-alt' style='color:#00eeff'></i>
+                        <h2> Frontend Development</h2>
+                        <p>I develop responsive and interactive user interfaces using technologies like React, HTML, CSS, and JavaScript. My focus is on performance, cross-browser compatibility, and delivering a visually polished user experience that aligns with modern UI/UX trends.
+                        </p>
+                        <a href="#" class="read" data-service="frontend">Learn More</a>
+                    </div>
+                    <div>
+                        <i class='bx bx-server' style='color:#00eeff'></i>
+                        <h2> Backend Development</h2>
+                        <p>I specialize in building secure and efficient server-side applications using technologies such as Node.js, Express, and SQL/NoSQL databases. I ensure smooth data management, API integration, and business logic implementation to power dynamic web and mobile solutions.
+                        </p>
+                        <a href="#" class="read" data-service="backend">Learn More</a>
+                    </div>
+                    <div>
+                        <i class='bx bx-mobile-alt' style='color:#00eeff'></i>
+                        <h2> Mobile App Development</h2>
+                        <p>I develop cross-platform mobile applications using frameworks like React Native. My goal is to deliver smooth, high-performing apps with clean user interfaces and reliable functionality across both Android and iOS devices.</p>
+                        <a href="#" class="read" data-service="mobile">Learn More</a>
+                    </div>
+                     <div>
+                        <i class='bx bx-layer' style='color:#00eeff'></i>
+                        <h2> Full-Stack Development</h2>
+                        <p>I build scalable and high-performance applications from end to end, combining modern frontend technologies with robust backend architectures. From planning and development to deployment, I deliver complete solutions that meet both user and business needs.</p>
+                        <a href="#" class="read" data-service="fullstack">Learn More</a>
+                    </div>
+                    <div>
+                        <i class='bx bx-check-shield' style='color:#00eeff'></i>
+                        <h2> Quality Assurance</h2>
+                        <p>I ensure software reliability by performing manual and automated testing, identifying bugs, and validating functionality across devices and platforms. I follow industry-standard QA practices to ensure every product meets quality, performance, and usability standards before launch.
+                        </p>
+                        <a href="#" class="read" data-service="qa">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 class="sub-title"> My <span>Skills</span></h1>
+
+    <section>
+        <div class="container1" id="skills">
+            <h1 class="heading1">Programming Languages</h1>
+            <div class="Technical-bars">
+                <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e' title="HTML"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-css3' style='color:#00eeff' title="CSS"></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-javascript' style='color:#b0bc1e' title="JavaScript"></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-python' style='color:#c32ec9' title="Python"></i>
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-react' style='color:#69bcbc' title="React"></i>
+                    <div class="info">
+                        <span>React</span>
+                    </div>
+                    <div class="progress-line react">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-java' style='color:#f89820' title="Java"></i>
+                    <div class="info">
+                        <span>Java</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-php' style='color:#8993be' title="PHP"></i>
+                    <div class="info">
+                        <span>PHP</span>
+                    </div>
+                    <div class="progress-line php">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-android' style='color:#7f52ff' title="Kotlin"></i>
+                    <div class="info">
+                        <span>Kotlin</span>
+                    </div>
+                    <div class="progress-line kotlin">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bx-data' style='color:#336791' title="SQL"></i>
+                    <div class="info">
+                        <span>SQL</span>
+                    </div>
+                    <div class="progress-line sql">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-c-plus-plus' style='color:#659ad2' title="C"></i>
+                    <div class="info">
+                        <span>C</span>
+                    </div>
+                    <div class="progress-line c">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-c-plus-plus' style='color:#00599c' title="C++"></i>
+                    <div class="info">
+                        <span>C++</span>
+                    </div>
+                    <div class="progress-line cpp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bx-bar-chart-alt-2' style='color:#276dc3' title="R"></i>
+                    <div class="info">
+                        <span>R</span>
+                    </div>
+                    <div class="progress-line r">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="precentage">98%</div>
+                    <div class="text"> Creativity</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="precentage">75%</div>
+                    <div class="text"> Communication</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="precentage">75%</div>
+                    <div class="text"> Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="precentage">85%</div>
+                    <div class="text"> Team work</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="Portfolio" id="project">
+            <div class="main-text" id="project">
+                <h2>My <span>Projects</span></h2>
+
+                <!-- First Row: Web Development Projects -->
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="src/1.jpg.jpg">
+                        <div class="layer">
+                            <h5>Online Laundry Management System</h5>
+                            <span class="project-category">E-Commerce Web Development</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="src/2.jpg.jpg">
+                        <div class="layer">
+                            <h5>Online Hotel Reservation System</h5>
+                            <span class="project-category">Web Application Development</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="src/3.jpg">
+                        <div class="layer">
+                            <h5>Online Glass Inventory Management System</h5>
+                            <span class="project-category">Inventory Management Systems</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row: E-commerce & Social Projects -->
+                <div class="portfolio-content" style="margin-top: 50px;">
+                    <div class="row">
+                        <img src="src/4.jpg">
+                        <div class="layer">
+                            <h5>Online Food Donation System</h5>
+                            <span class="project-category">Social Impact Web Development</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="src/5.jpg">
+                        <div class="layer">
+                            <h5>Cooking Skill Sharing Platform</h5>
+                            <span class="project-category">Community-Based Web Platforms</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="src/blog.jpg">
+                        <div class="layer">
+                            <h5>Mini Blog Shopping Cart</h5>
+                            <span class="project-category">Blog & E-Commerce Integration</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Row: Mobile & Special Projects -->
+                <div class="portfolio-content" style="margin-top: 50px;">
+                    <div class="row single-project">
+                        <img src="src/8.jpg">
+                        <div class="layer">
+                            <h5>Task App</h5>
+                            <span class="project-category">Mobile App Development</span>
+                            <a href="#"> <i class='bx bx-link-external' style="color:#081b29;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let's work Together</h4>
+            <p>HELLO!</p>
+            <div class="contact-list">
+                <li><a href="mailto:herathharshaka@gmail.com"><i class='bx bx-send'></i>herathharshaka@gmail.com</a>
+                </li>
+                <li><a href="tel:+94776306246"><i class='bx bx-phone'></i>+94 76 698 1768</a></li>
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/share/1BY8CvWp5i/?mibextid=wwXIfr"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://github.com/Harshaka512"><i class='bx bxl-github'></i></a>
+                <a href="https://wa.me/94766981768"><i class='bx bxl-whatsapp'></i></a>
+                <a href="http://www.linkedin.com/in/harshaka-herath-aa3413324"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="" method="POST">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="text" name="subject" placeholder="Enter Your Subject">
+                <textarea name="message" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="submit" value="submit" class="send">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p class="copyright">© 2025 Harshaka Herath. All rights reserved.</p>
+                <p class="tagline">Crafting Digital Experiences with Code & Creativity</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home" class="footer-link">
+                    <i class='bx bx-chevron-up'></i>
+                    <span>Back to Top</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-decoration">
+            <div class="footer-line"></div>
+        </div>
+    </footer>
+
+
+    <div class="floating-action-menu">
+        <div class="fab-button" id="fabButton">
+            <i class='bx bx-message-rounded-error'></i>
+        </div>
+        <div class="fab-options">
+            <div class="fab-option" data-tooltip="Download Resume">
+                <i class='bx bxs-download'></i>
+            </div>
+            <div class="fab-option" data-tooltip="Contact Me">
+                <a href="#contact"><i class='bx bxs-phone'></i></a>
+            </div>
+            <div class="fab-option" data-tooltip="Portfolio">
+                <a href="#home"><i class='bx bxs-briefcase'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Popup Modal -->
+    <div class="services-modal" id="servicesModal">
+        <div class="services-modal-content">
+            <div class="services-modal-header">
+                <h3 class="services-modal-title" id="servicesModalTitle"></h3>
+                <span class="services-close" id="servicesClose">&times;</span>
+            </div>
+            <div class="services-modal-body" id="servicesModalBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
