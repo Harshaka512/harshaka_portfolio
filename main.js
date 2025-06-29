@@ -10,11 +10,8 @@ var typed = new Typed(".text", {
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navbar = document.querySelector('.navbar');
-    const header = document.querySelector('.header');
-    const progressBar = document.querySelector('.progress-bar');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Mobile menu toggle
     if (mobileMenuBtn && navbar) {
         mobileMenuBtn.addEventListener('click', function() {
             navbar.classList.toggle('active');
@@ -26,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 navbar.classList.remove('active');
                 mobileMenuBtn.classList.remove('active');
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                this.classList.add('active');
             });
         });
         
@@ -38,45 +40,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Scroll progress and header effects
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        
-        // Update progress bar
-        if (progressBar) {
-            progressBar.style.width = scrollPercent + '%';
-        }
-        
-        // Header scroll effect
-        if (header) {
-            if (scrollTop > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }
-        
-        // Active navigation link
-        const sections = document.querySelectorAll('section[id]');
-        let current = '';
+    // Active navigation based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    
+    function updateActiveNav() {
+        const scrollY = window.pageYOffset;
         
         sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
             const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
+            const sectionId = section.getAttribute('id');
+            const correspondingNavLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (correspondingNavLink) {
+                    correspondingNavLink.classList.add('active');
+                }
             }
         });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('data-section') === current) {
-                link.classList.add('active');
-            }
-        });
-    });
+    }
+    
+    // Update active nav on scroll
+    window.addEventListener('scroll', updateActiveNav);
     
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
@@ -86,20 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
+                const offsetTop = targetSection.offsetTop - 80; // Account for fixed header
                 window.scrollTo({
-                    top: targetPosition,
+                    top: offsetTop,
                     behavior: 'smooth'
                 });
             }
         });
-    });
-    
-    // Add animation delay to nav links
-    navLinks.forEach((link, index) => {
-        link.style.setProperty('--i', index + 1);
     });
 });
 
@@ -122,6 +101,20 @@ const aboutSection = document.querySelector('.about');
 if (aboutSection) {
     observer.observe(aboutSection);
 }
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
 // Top arrow scroll to top functionality
 document.querySelector('.top').addEventListener('click', function(e) {

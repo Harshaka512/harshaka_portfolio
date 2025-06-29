@@ -15,50 +15,40 @@
 
 <body>
     <header class="header">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-text">Portfolio</span>
-                <span class="logo-dot"></span>
-            </a>
+        <a href="#" class="logo">
+            <i class='bx bx-code-alt'></i>
+            Portfolio
+        </a>
 
-            <nav class="navbar">
-                <a href="#home" class="nav-link active" data-section="home">
-                    <i class='bx bx-home-alt'></i>
-                    <span>Home</span>
-                </a>
-                <a href="#about" class="nav-link" data-section="about">
-                    <i class='bx bx-user'></i>
-                    <span>About</span>
-                </a>
-                <a href="#services" class="nav-link" data-section="services">
-                    <i class='bx bx-cog'></i>
-                    <span>Services</span>
-                </a>
-                <a href="#skills" class="nav-link" data-section="skills">
-                    <i class='bx bx-code-alt'></i>
-                    <span>Skills</span>
-                </a>
-                <a href="#project" class="nav-link" data-section="project">
-                    <i class='bx bx-briefcase'></i>
-                    <span>Projects</span>
-                </a>
-                <a href="#contact" class="nav-link" data-section="contact">
-                    <i class='bx bx-envelope'></i>
-                    <span>Contact</span>
-                </a>
-            </nav>
-            
-            <div class="mobile-menu-btn">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="nav-link active">
+                <i class='bx bx-home-alt'></i>
+                <span>Home</span>
+            </a>
+            <a href="#about" style="--i:2" class="nav-link">
+                <i class='bx bx-user'></i>
+                <span>About</span>
+            </a>
+            <a href="#services" style="--i:3" class="nav-link">
+                <i class='bx bx-briefcase'></i>
+                <span>Services</span>
+            </a>
+            <a href="#skills" style="--i:4" class="nav-link">
+                <i class='bx bx-brain'></i>
+                <span>Skills</span>
+            </a>
+            <a href="#project" style="--i:5" class="nav-link">
+                <i class='bx bx-folder-open'></i>
+                <span>Projects</span>
+            </a>
+            <a href="#contact" style="--i:6" class="nav-link">
+                <i class='bx bx-envelope'></i>
+                <span>Contact</span>
+            </a>
+        </nav>
         
-        <div class="nav-progress">
-            <div class="progress-bar"></div>
+        <div class="mobile-menu-btn">
+            <i class='bx bx-menu'></i>
         </div>
     </header>
     <section class="home" id="home">
@@ -104,8 +94,8 @@
         </div>
     </section>
 
-    <section>
-        <div class="services" id="services">
+    <section id="services">
+        <div class="services">
             <div class="container">
                 <h1 class="sub-title">My <span> Services</span></h1>
                 <div class="services-list">
@@ -155,8 +145,8 @@
     </section>
     <h1 class="sub-title"> My <span>Skills</span></h1>
 
-    <section>
-        <div class="container1" id="skills">
+    <section id="skills">
+        <div class="container1">
             <h1 class="heading1">Programming Languages</h1>
             <div class="Technical-bars">
                 <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e' title="HTML"></i>
@@ -296,9 +286,9 @@
             </div>
         </div>
     </section>
-    <section>
-        <div id="Portfolio" id="project">
-            <div class="main-text" id="project">
+    <section id="project">
+        <div id="Portfolio">
+            <div class="main-text">
                 <h2>My <span>Projects</span></h2>
 
                 <!-- First Row: Web Development Projects -->
@@ -397,30 +387,76 @@
                 <input type="email" name="email" placeholder="Enter Your Email" required>
                 <input type="text" name="subject" placeholder="Enter Your Subject">
                 <textarea name="message" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-                <input type="submit" value="submit" class="send">
+                <input type="submit" value="Submit" class="send">
             </form>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
+    <!-- Creative Footer -->
+    <footer class="creative-footer">
         <div class="footer-content">
-            <div class="footer-text">
-                <p class="copyright">© 2025 Harshaka Herath. All rights reserved.</p>
-                <p class="tagline">Crafting Digital Experiences with Code & Creativity</p>
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class='bx bx-code-alt'></i>
+                    <span>Harshaka Herath</span>
+                </div>
+                <p class="footer-tagline">Crafting Digital Experiences with Code & Creativity</p>
             </div>
-            <div class="footer-links">
-                <a href="#home" class="footer-link">
-                    <i class='bx bx-chevron-up'></i>
-                    <span>Back to Top</span>
-                </a>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#home"><i class='bx bx-home-alt'></i> Home</a>
+                    <a href="#about"><i class='bx bx-user'></i> About</a>
+                    <a href="#services"><i class='bx bx-briefcase'></i> Services</a>
+                    <a href="#project"><i class='bx bx-folder-open'></i> Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Me</h4>
+                <div class="footer-social">
+                    <a href="https://github.com/Harshaka512" class="social-link">
+                        <i class='bx bxl-github'></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="http://www.linkedin.com/in/harshaka-herath-aa3413324" class="social-link">
+                        <i class='bx bxl-linkedin'></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/94766981768" class="social-link">
+                        <i class='bx bxl-whatsapp'></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class='bx bx-envelope'></i>
+                        <span>herathharshaka@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-phone'></i>
+                        <span>+94 76 698 1768</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-decoration">
+        
+        <div class="footer-bottom">
             <div class="footer-line"></div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Harshaka Herath. All rights reserved.</p>
+                <p class="footer-quote">"Code is poetry in motion"</p>
+            </div>
         </div>
     </footer>
 
+  
+    <<a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
 
     <div class="floating-action-menu">
         <div class="fab-button" id="fabButton">
