@@ -9,6 +9,7 @@
 body {
     color: #fff;
     background: #081b29;
+    overflow-x: hidden;
 }
 
 .header {
@@ -2087,206 +2088,193 @@ section{
     .radial-bars .radial-bar {
         width: 45%;
     }
+    .container1 {
+        width: 100%;
+        padding: 30px 0;
+        margin: 0 auto 30px auto;
+    }
+    .Technical-bars .bar {
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    .radial-bars {
+        flex-direction: column;
+        align-items: center;
+    }
+    .radial-bars .radial-bar {
+        width: 80%;
+        margin: 0 auto 2rem auto;
+    }
+    .main-text {
+        padding-top: 60px;
+        margin-top: 0;
+    }
+    .main-text h2 {
+        font-size: 32px;
+    }
+    .portfolio-content {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 2%;
+    }
+    .row {
+        min-width: 220px;
+        width: 100%;
+        height: auto;
+    }
+    .row img {
+        width: 100%;
+        height: auto;
+        min-width: unset;
+        max-width: 100%;
+    }
+    .contact {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        padding: 0 2%;
+        gap: 1.5rem;
+    }
+    .contact-text h2 {
+        font-size: 32px;
+    }
+    .creative-footer {
+        padding: 30px 2% 10px;
+        margin-top: 30px;
+    }
+    .footer-content {
+        gap: 15px;
+    }
 }
 
 /* Mobile Large (576px to 767px) */
 @media (max-width: 767px) {
     .header {
-        padding: 15px 5%;
+        padding: 10px 3%;
+        height: 60px;
     }
-    
-    .logo {
-        font-size: 22px;
-    }
-    
-    .logo i {
-        font-size: 24px;
-    }
-    
     .navbar {
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
-        width: 100%;
-        padding: 2rem 0;
-        background: rgba(8, 27, 41, 0.98);
-        backdrop-filter: blur(15px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        transition: 0.4s ease;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(8, 27, 41, 0.97);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        border-top: 1px solid rgba(0, 238, 255, 0.2);
+        transition: transform 0.4s cubic-bezier(.77,0,.18,1), opacity 0.3s;
+        z-index: 9999;
+        padding: 0;
     }
-
     .navbar.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-    
     .nav-link {
+        font-size: 1.3rem;
+        padding: 18px 40px;
+        border-radius: 30px;
+        background: rgba(0,238,255,0.08);
+        margin: 0;
+        width: 80vw;
+        max-width: 320px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 2px 12px rgba(0,238,255,0.08);
+        transition: background 0.3s, color 0.3s, transform 0.2s;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 12px;
-        font-size: 18px;
-        margin: 15px 5%;
-        padding: 15px 20px;
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.05);
-        transition: all 0.3s ease;
     }
-    
-    .nav-link:last-child {
-        border-bottom: none;
-    }
-    
-    .nav-link:hover {
-        background: rgba(0, 238, 255, 0.15);
-        border-color: rgba(0, 238, 255, 0.3);
-        transform: translateX(10px);
-    }
-    
     .nav-link i {
-        font-size: 20px;
-        min-width: 24px;
+        font-size: 1.5rem;
     }
-    
-    .nav-link span {
-        font-weight: 500;
+    .nav-link.active, .nav-link:hover {
+        background: linear-gradient(90deg, #0ef 0%, #00bcd4 100%);
+        color: #081b29;
+        transform: scale(1.05);
+        box-shadow: 0 4px 24px rgba(0,238,255,0.18);
     }
-    
     .mobile-menu-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 45px;
-        height: 45px;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: 18px;
+        top: 8px;
+        z-index: 10000;
+        background: rgba(0,238,255,0.12);
+        border-radius: 12px;
+        border: 1px solid rgba(0,238,255,0.18);
+        box-shadow: 0 2px 8px rgba(0,238,255,0.08);
+        font-size: 2rem;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s, transform 0.2s;
     }
-    
-    .mobile-menu-btn i {
-        font-size: 24px;
+    .mobile-menu-btn.active, .mobile-menu-btn:hover {
+        background: #0ef;
+        color: #081b29;
+        transform: scale(1.1) rotate(90deg);
     }
-    
     .home {
-        padding: 70px 5% 0;
-        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 3% 0;
+        min-height: 90vh;
+        gap: 1.2rem;
+        text-align: center;
     }
-    
-    .home-content h1 {
-        font-size: 36px;
-    }
-    
-    .home-content h3 {
-        font-size: 24px;
-    }
-    
-    .home-content p {
-        font-size: 16px;
-    }
-    
     .home-img {
-        width: 280px;
-        height: 280px;
+        margin-bottom: 0;
+        margin-top: 0;
+        align-self: center;
     }
-    
-    .home-img img {
-        width: 260px;
-        height: 260px;
+    .home-content {
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
-    
-    .about {
-        padding: 60px 5%;
-    }
-    
-    .about-img {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .about-img img {
-        width: 230px;
-        height: 230px;
-    }
-    
-    .about-text h2 {
-        font-size: 28px;
-    }
-    
-    .about-text h3 {
-        font-size: 20px;
-    }
-    
-    .services-list {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .services-list div {
-        padding: 2rem 1.5rem;
-    }
-    
-    .services-list div h2 {
-        font-size: 20px;
-    }
-    
-    .services-list div p {
-        font-size: 14px;
-    }
-    
-    .portfolio-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .row {
-        height: 250px;
-    }
-    
-    .contact {
-        padding: 60px 5%;
-    }
-    
-    .contact-text h2 {
-        font-size: 28px;
-    }
-    
-    .contact-form form input,
-    .contact-form form textarea {
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-    
-    .Technical-bars .bar {
-        margin-bottom: 1.5rem;
-    }
-    
-    .Technical-bars .bar .info span {
-        font-size: 15px;
-    }
-    
-    .radial-bars .radial-bar {
+    .portfolio-content .row img {
         width: 100%;
-        margin-bottom: 2rem;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
     }
-    
-    .radial-bars .radial-bar svg {
-        width: 100px;
-        height: 100px;
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        margin: 18px 0 10px 0;
+        width: 100%;
     }
-    
-    .radial-bars .radial-bar .precentage {
-        font-size: 18px;
+    .contact-form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .radial-bars .radial-bar .text {
-        font-size: 14px;
+    .contact-form form {
+        width: 100%;
     }
 }
-
-/* Mobile Small (up to 575px) */
 @media (max-width: 575px) {
     .header {
         padding: 10px 3%;
@@ -2302,7 +2290,17 @@ section{
     }
     
     .home {
-        padding: 60px 3% 0;
+        padding: 15px 1% 0;
+        min-height: 60vh;
+        gap: 0.2rem;
+    }
+    
+    .home-img {
+        margin-bottom: 6px;
+    }
+    
+    .home-content {
+        margin-top: 0;
     }
     
     .home-content h1 {
@@ -2490,6 +2488,54 @@ section{
     .modal-body li,
     .services-modal-body li {
         font-size: 14px;
+    }
+    .container1 {
+        width: 100%;
+        padding: 10px 0;
+        margin: 0 auto 10px auto;
+    }
+    .Technical-bars .bar {
+        font-size: 14px;
+    }
+    .radial-bars .radial-bar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .main-text h2 {
+        font-size: 20px;
+    }
+    .portfolio-content {
+        gap: 0.5rem;
+        padding: 0 1%;
+    }
+    .row {
+        min-width: 120px;
+        width: 100%;
+        height: auto;
+    }
+    .row img {
+        width: 100%;
+        height: auto;
+    }
+    .contact-text h2 {
+        font-size: 20px;
+    }
+    .creative-footer {
+        padding: 10px 1% 5px;
+        margin-top: 10px;
+    }
+    .footer-content {
+        gap: 8px;
+    }
+    .portfolio-content .row img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+    .contact-form {
+        max-width: 98vw;
     }
 }
 
@@ -3012,6 +3058,57 @@ section{
     
     .contact-item {
         font-size: 13px;
+    }
+}
+
+/* Container padding adjustments */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px 5px;
+    }
+    .sub-title {
+        font-size: 22px;
+        padding-bottom: 6px;
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        padding: 10px 2px;
+    }
+    .sub-title {
+        font-size: 18px;
+        padding-bottom: 4px;
+    }
+}
+@media (max-width: 400px) {
+    .container {
+        padding: 4px 1px;
+    }
+    .sub-title {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .portfolio-content .row {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        box-shadow: 0 2px 16px rgba(0,238,255,0.10);
+        border-radius: 12px;
+        background: #081b29;
+        margin-bottom: 1.2rem;
+    }
+}
+@media (max-width: 575px) {
+    .portfolio-content .row {
+        max-width: 98vw;
+        margin-bottom: 0.8rem;
     }
 }
 
