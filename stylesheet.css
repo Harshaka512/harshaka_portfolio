@@ -856,13 +856,26 @@ section{
     color: #0ef;
 }
 .portfolio-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 50px;
-    padding: 0 10%;
-    flex-wrap: nowrap;
+    justify-items: center;
+    align-items: stretch;
+    padding: 0 5%;
+}
+.portfolio-content .row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 0;
+}
+.portfolio-content .row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
 }
 .row{
     position: relative;
@@ -3109,6 +3122,30 @@ section{
     .portfolio-content .row {
         max-width: 98vw;
         margin-bottom: 0.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 5%;
+    }
+    .portfolio-content .row {
+        flex: 1 1 30%;
+        max-width: 32%;
+        min-width: 280px;
+        margin-bottom: 2rem;
+        box-sizing: border-box;
+    }
+    .portfolio-content .row img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
     }
 }
 
